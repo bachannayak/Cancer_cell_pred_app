@@ -2,8 +2,7 @@ import random
 from sklearn import datasets
 import numpy as np
 import pandas as pd
-import seaborn as sns 
-import matplotlib.pyplot as plt
+
 import streamlit as st
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
@@ -13,8 +12,7 @@ feature = cancer_data['data']
 label = cancer_data['target']
 df_frt = pd.DataFrame(feature , columns = cancer_data['feature_names'])
 df_lbl = pd.DataFrame(label , columns = ['label'])
-df = pd.concat([df_frt, df_lbl], axis=1)
-df = df.sample(frac = 1)
+
 feature = df_frt
 label = df_lbl
 
